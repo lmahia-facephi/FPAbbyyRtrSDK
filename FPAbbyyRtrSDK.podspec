@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPAbbyyRtrSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'AbbyyRtrSDK pod version'
   s.description      = <<-DESC
 This pod was built to provide a pod version of Abbyy Framework which is licensed.
@@ -18,37 +18,39 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
   s.homepage         = 'https://github.com/lmahia/FPAbbyyRtrSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lmahia' => 'lmahia@facephi.com' }
-  s.source           = { :git => 'https://github.com/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/lmahia/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
 
+  s.xcconfig = {
+    'ENABLE_BITCODE'                       => 'NO',
+    'OTHER_LDFLAGS'                        => '-lObjC',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'ONLY_ACTIVE_ARCH'                     => 'YES',
+  }
+
   s.source_files   = 'FPAbbyyRtrSDK/Classes/**/*'
 
-   s.resource_bundles = {
-     'FPAbbyyRtrSDK' => ['FPAbbyyRtrSDK/Assets/**/*']
-   }
+  s.resource_bundles = {
+    'FPAbbyyRtrSDK' => ['FPAbbyyRtrSDK/Assets/**/*']
+  }
 
-   s.preserve_paths = 'FPAbbyyRtrSDK/Frameworks/**/*'
+  s.preserve_paths = 'FPAbbyyRtrSDK/Frameworks/**/*'
 
-   s.ios.vendored_frameworks = [
-        'FPAbbyyRtrSDK/Frameworks/AbbyyRtrSDK.framework',
-        'FPAbbyyRtrSDK/Frameworks/AbbyyZLib.framework',
-        'FPAbbyyRtrSDK/Frameworks/ExtraNeoML.Dnn.framework',
-        'FPAbbyyRtrSDK/Frameworks/FineMachineLearning.framework',
-        'FPAbbyyRtrSDK/Frameworks/FineMachineLearningExt.framework',
-        'FPAbbyyRtrSDK/Frameworks/FineObj.framework',
-        'FPAbbyyRtrSDK/Frameworks/Mobile.imaging.framework',
-        'FPAbbyyRtrSDK/Frameworks/Mobile.Ocr4.framework',
-        'FPAbbyyRtrSDK/Frameworks/Mobile.SDK.framework',
-        'FPAbbyyRtrSDK/Frameworks/Mobile.Vision.framework',
-        'FPAbbyyRtrSDK/Frameworks/NeoMathEngine.framework',
-        'FPAbbyyRtrSDK/Frameworks/NeoML.framework',
-        'FPAbbyyRtrSDK/Frameworks/PortLayer.framework'
-    ]
-
-   s.pod_target_xcconfig = {
-       'ENABLE_BITCODE'         => 'NO',
-       'OTHER_LDFLAGS'          => '-lObjC'
-   }
+  s.ios.vendored_frameworks = [
+    'FPAbbyyRtrSDK/Frameworks/AbbyyRtrSDK.framework',
+    'FPAbbyyRtrSDK/Frameworks/AbbyyZLib.framework',
+    'FPAbbyyRtrSDK/Frameworks/ExtraNeoML.Dnn.framework',
+    'FPAbbyyRtrSDK/Frameworks/FineMachineLearning.framework',
+    'FPAbbyyRtrSDK/Frameworks/FineMachineLearningExt.framework',
+    'FPAbbyyRtrSDK/Frameworks/FineObj.framework',
+    'FPAbbyyRtrSDK/Frameworks/Mobile.imaging.framework',
+    'FPAbbyyRtrSDK/Frameworks/Mobile.Ocr4.framework',
+    'FPAbbyyRtrSDK/Frameworks/Mobile.SDK.framework',
+    'FPAbbyyRtrSDK/Frameworks/Mobile.Vision.framework',
+    'FPAbbyyRtrSDK/Frameworks/NeoMathEngine.framework',
+    'FPAbbyyRtrSDK/Frameworks/NeoML.framework',
+    'FPAbbyyRtrSDK/Frameworks/PortLayer.framework'
+  ]
 
 end
