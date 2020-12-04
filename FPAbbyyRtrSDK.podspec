@@ -9,34 +9,46 @@
 Pod::Spec.new do |s|
   s.name             = 'FPAbbyyRtrSDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of FPAbbyyRtrSDK.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'AbbyyRtrSDK pod version'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This pod was built to provide a pod version of Abbyy Framework which is licensed.
+ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
                        DESC
 
-  s.homepage         = 'https://github.com/lmahia@facephi.com/FPAbbyyRtrSDK'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/lmahia/FPAbbyyRtrSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lmahia@facephi.com' => 'lmahia@facephi.com' }
-  s.source           = { :git => 'https://github.com/lmahia@facephi.com/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'lmahia' => 'lmahia@facephi.com' }
+  s.source           = { :git => 'https://github.com/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
 
-  s.source_files = 'FPAbbyyRtrSDK/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'FPAbbyyRtrSDK' => ['FPAbbyyRtrSDK/Assets/*.png']
-  # }
+  s.source_files   = 'FPAbbyyRtrSDK/Classes/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.resource_bundles = {
+     'FPAbbyyRtrSDK' => ['FPAbbyyRtrSDK/Assets/**/*']
+   }
+
+   s.preserve_paths = 'FPAbbyyRtrSDK/Frameworks/**/*'
+
+   s.ios.vendored_frameworks = [
+        'FPAbbyyRtrSDK/Frameworks/AbbyyRtrSDK.framework',
+        'FPAbbyyRtrSDK/Frameworks/AbbyyZLib.framework',
+        'FPAbbyyRtrSDK/Frameworks/ExtraNeoML.Dnn.framework',
+        'FPAbbyyRtrSDK/Frameworks/FineMachineLearning.framework',
+        'FPAbbyyRtrSDK/Frameworks/FineMachineLearningExt.framework',
+        'FPAbbyyRtrSDK/Frameworks/FineObj.framework',
+        'FPAbbyyRtrSDK/Frameworks/Mobile.imaging.framework',
+        'FPAbbyyRtrSDK/Frameworks/Mobile.Ocr4.framework',
+        'FPAbbyyRtrSDK/Frameworks/Mobile.SDK.framework',
+        'FPAbbyyRtrSDK/Frameworks/Mobile.Vision.framework',
+        'FPAbbyyRtrSDK/Frameworks/NeoMathEngine.framework',
+        'FPAbbyyRtrSDK/Frameworks/NeoML.framework',
+        'FPAbbyyRtrSDK/Frameworks/PortLayer.framework'
+    ]
+
+   s.pod_target_xcconfig = {
+       'ENABLE_BITCODE'         => 'NO',
+       'OTHER_LDFLAGS'          => '-lObjC'
+   }
+
 end
