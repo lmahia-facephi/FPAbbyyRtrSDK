@@ -1,0 +1,6 @@
+use_frameworks!
+target 'FPAbbyyRtrSDK_Tests' do
+  pod 'FPAbbyyRtrSDK', :path => '../'
+  
+  
+end
