@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPAbbyyRtrSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'AbbyyRtrSDK pod version'
   s.description      = <<-DESC
 This pod was built to provide a pod version of Abbyy Framework which is licensed.
@@ -17,7 +17,7 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
   s.homepage         = 'https://github.com/lmahia/FPAbbyyRtrSDK'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lmahia' => 'lmahia@facephi.com' }
+  s.author           = { 'Leandro Mahia' => 'lmahia@facephi.com' }
   s.source           = { :git => 'https://github.com/lmahia/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
@@ -25,15 +25,10 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
   s.xcconfig = {
     'ENABLE_BITCODE'                       => 'NO',
     'OTHER_LDFLAGS'                        => '-lObjC',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-    'ONLY_ACTIVE_ARCH'                     => 'YES',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 
   s.source_files   = 'FPAbbyyRtrSDK/Classes/**/*'
-
-  s.resource_bundles = {
-    'FPAbbyyRtrSDK' => ['FPAbbyyRtrSDK/Assets/**/*']
-  }
 
   s.preserve_paths = 'FPAbbyyRtrSDK/Frameworks/**/*'
 
