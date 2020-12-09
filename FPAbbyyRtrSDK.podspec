@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPAbbyyRtrSDK'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'AbbyyRtrSDK pod version'
   s.description      = <<-DESC
 This pod was built to provide a pod version of Abbyy Framework which is licensed.
@@ -16,7 +16,7 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
                        DESC
 
   s.homepage         = 'https://github.com/lmahia/FPAbbyyRtrSDK'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'Commercial', :file => 'LICENSE' }
   s.author           = { 'Leandro Mahia' => 'lmahia@facephi.com' }
   s.source           = { :git => 'https://github.com/lmahia/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
 

@@ -1,15 +1,9 @@
+![galeria-selphid-logo](https://user-images.githubusercontent.com/1539469/83532587-bd1a2380-a4ee-11ea-860d-8152d7680175.png)
+
 # FPAbbyyRtrSDK
 
-[![CI Status](https://img.shields.io/travis/lmahia@facephi.com/FPAbbyyRtrSDK.svg?style=flat)](https://travis-ci.org/lmahia@facephi.com/FPAbbyyRtrSDK)
-[![Version](https://img.shields.io/cocoapods/v/FPAbbyyRtrSDK.svg?style=flat)](https://cocoapods.org/pods/FPAbbyyRtrSDK)
-[![License](https://img.shields.io/cocoapods/l/FPAbbyyRtrSDK.svg?style=flat)](https://cocoapods.org/pods/FPAbbyyRtrSDK)
-[![Platform](https://img.shields.io/cocoapods/p/FPAbbyyRtrSDK.svg?style=flat)](https://cocoapods.org/pods/FPAbbyyRtrSDK)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+This pod was built to provide a pod version of Abbyy Framework which is licensed.
+ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 ## Installation
 
@@ -22,8 +16,9 @@ pod 'FPAbbyyRtrSDK'
 
 ## Author
 
-lmahia@facephi.com, lmahia@facephi.com
+Leandro Mahía <lmahia@facephi.com>
 
 ## License
 
-FPAbbyyRtrSDK is available under the MIT license. See the LICENSE file for more info.
+Copyright (c) 2020 FacePhi Biometría SA
+
