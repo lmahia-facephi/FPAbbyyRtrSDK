@@ -24,8 +24,7 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
   s.xcconfig = {
     'ENABLE_BITCODE'                       => 'NO',
-    'OTHER_LDFLAGS'                        => '-lObjC',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386'
   }
 
   s.source_files   = 'FPAbbyyRtrSDK/Classes/**/*'
