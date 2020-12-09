@@ -21,4 +21,3 @@ Leandro Mahía <lmahia@facephi.com>
 ## License
 
 Copyright (c) 2020 FacePhi Biometría SA
-

@@ -1,6 +1,0 @@
-framework module FPAbbyyRtrSDK {
-  umbrella header "FPAbbyyRtrSDK-umbrella.h"
-
-  export *
-  module * { export * }
-}
