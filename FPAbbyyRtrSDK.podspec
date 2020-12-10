@@ -48,4 +48,6 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
     'FPAbbyyRtrSDK/Frameworks/PortLayer.framework'
   ]
 
+  s.libraries = 'c++', 'z'
+
 end
