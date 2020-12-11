@@ -21,7 +21,6 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
   s.source           = { :git => 'https://github.com/lmahia/FPAbbyyRtrSDK.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
-  s.static_framework = true
 
   s.xcconfig = {
     'ENABLE_BITCODE'                       => 'NO',
