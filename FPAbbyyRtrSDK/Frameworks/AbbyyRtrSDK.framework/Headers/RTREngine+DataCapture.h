@@ -1,4 +1,4 @@
-/// ABBYY® Mobile Capture © 2019 ABBYY Production LLC.
+/// ABBYY Mobile Capture © 2020 ABBYY Development, Inc.
 /// ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 #import "RTREngine.h"
@@ -6,7 +6,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol RTREngineSettings;
 @protocol RTRDataCaptureService;
 @protocol RTRDataCaptureServiceDelegate;
 
@@ -16,11 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - RTREngine
 
 @interface RTREngine (DataCapture)
-
-/**
- * Additional engine settings.
- */
-@property (nonatomic, readonly) id<RTREngineSettings> extendedSettings;
 
 /**
  * Creates a background recognition DataCapture service.
@@ -54,18 +48,6 @@ NS_ASSUME_NONNULL_BEGIN
 * A list of supported schemes for the specifed profile.
 */
 - (nullable NSArray<RTRDataScheme*>*)dataSchemesForProfile:(NSString*)profile error:(NSError**)error;
-
-@end
-
-#pragma mark - RTREngineSettings
-
-@protocol RTREngineSettings
-@required
-
-/**
- * The additional path to search framework data.
- */
-@property (nonatomic, copy, nullable) NSString* externalAssetsPath;
 
 @end
 

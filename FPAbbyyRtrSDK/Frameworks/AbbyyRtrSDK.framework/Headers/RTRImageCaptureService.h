@@ -1,4 +1,4 @@
-/// ABBYY® Mobile Capture © 2019 ABBYY Production LLC.
+/// ABBYY Mobile Capture © 2020 ABBYY Development, Inc.
 /// ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 #import "RTRRecognitionService.h"
@@ -46,6 +46,12 @@ NS_ASSUME_NONNULL_BEGIN
  * If not set, the values will be calculated from documentSize setting.
  */
 @property (atomic, assign) CGFloat aspectRatioMax;
+
+/**
+ * Number of frames with the highest quality to collect during capture.
+ * The default is 0, meaning that no additional frames are required.
+ */
+@property (atomic, assign) NSUInteger numberOfBestFramesToCollect;
 
 @end
 

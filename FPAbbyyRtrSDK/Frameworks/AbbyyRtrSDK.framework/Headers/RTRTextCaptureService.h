@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param dictionaryName The name of the translation dictionary. Set nil for default value.
  */
-- (void)setTranslationDictionary:(nullable NSString*)dictionaryName;
+- (void)setTranslationDictionary:(nullable NSString*)dictionaryName DEPRECATED_MSG_ATTRIBUTE("This functionality is deprecated and will be removed in future versions.");
 
 @end
 

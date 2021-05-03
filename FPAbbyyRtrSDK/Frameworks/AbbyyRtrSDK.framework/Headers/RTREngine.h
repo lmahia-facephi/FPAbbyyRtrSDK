@@ -7,6 +7,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol RTRCoreAPI;
+@protocol RTREngineSettings;
 
 #pragma mark - RTREngine
 
@@ -16,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 RTR_API_LINKAGE
 @interface RTREngine : NSObject
+
+/**
+ * Additional engine settings.
+ */
+@property (nonatomic, readonly) id<RTREngineSettings> extendedSettings;
 
 /**
  * Returns the shared instance ot the engine or nil if there was no successful calls of `+ sharedEngineWithLicenseData:` method.
@@ -43,6 +49,18 @@ RTR_API_LINKAGE
  * @return An object that conforms to RTRCoreAPI protocol.
  */
 - (id<RTRCoreAPI>)createCoreAPI;
+
+@end
+
+#pragma mark - RTREngineSettings
+
+@protocol RTREngineSettings
+@required
+
+/**
+ * The additional path to search framework data.
+ */
+@property (nonatomic, copy, nullable) NSString* externalAssetsPath;
 
 @end
 

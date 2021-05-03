@@ -1,4 +1,4 @@
-/// ABBYY® Mobile Capture © 2019 ABBYY Production LLC.
+/// ABBYY Mobile Capture © 2020 ABBYY Development, Inc.
 /// ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 #import "RTRRecognitionServiceDelegate.h"
@@ -45,6 +45,8 @@ RTR_API_LINKAGE
 @property (nonatomic, strong, readonly, nullable) NSArray<RTRQualityAssessmentForOCRBlock*>* qualityAssessmentForOCRBlocks;
 /** The result image size. */
 @property (nonatomic, assign, readonly) CGSize imageSize;
+/** The processed frame. */
+@property (nonatomic, assign, readonly) CMSampleBufferRef sampleBuffer;
 
 - (instancetype)init __unavailable;
 
@@ -67,6 +69,8 @@ RTR_API_LINKAGE
 @property (nonatomic, assign, readonly) CGSize documentSize;
 /** The quality assesment blocks. */
 @property (nonatomic, strong, readonly, nullable) NSArray<RTRQualityAssessmentForOCRBlock*>* qualityAssessmentForOCRBlocks;
+/** The best frames status. May be empty, check `setNumberOfBestFrames:` for more info. */
+@property (nonatomic, strong, readonly) NSArray<RTRImageCaptureStatus*>* bestFramesStatus;
 
 - (instancetype)init __unavailable;
 

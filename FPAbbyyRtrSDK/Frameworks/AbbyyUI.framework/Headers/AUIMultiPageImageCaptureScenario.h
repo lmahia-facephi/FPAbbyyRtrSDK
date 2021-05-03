@@ -1,4 +1,4 @@
-/// ABBYY® Mobile Capture © 2019 ABBYY Production LLC.
+/// ABBYY Mobile Capture © 2020 ABBYY Development, Inc.
 /// ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 #import <Foundation/Foundation.h>
@@ -120,7 +120,7 @@ ABBYYUI_EXTERN
 /// Current result.
 @property (nonatomic, copy, readonly) id<AUIMultiPageImageCaptureResult> result;
 
-/// Creates scenario with valid engine and storage of image data.
+/// Creates scenario with a valid engine and storage of image data.
 - (instancetype)initWithEngine:(RTREngine*)engine pageStorage:(id<AUIPageStorage>)storage NS_DESIGNATED_INITIALIZER;
 /// Creates scenario with default AUIPageStorage based on the file system.
 - (nullable instancetype)initWithEngine:(RTREngine*)engine storagePath:(NSString*)path error:(NSError**)error;

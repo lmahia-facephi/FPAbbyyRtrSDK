@@ -1,4 +1,4 @@
-/// ABBYY® Mobile Capture © 2019 ABBYY Production LLC.
+/// ABBYY Mobile Capture © 2020 ABBYY Development, Inc.
 /// ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 #import <UIKit/UIKit.h>
@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, AUITheme) {
 	AUIThemeLight,
 	AUIThemeDark,
-};
+} DEPRECATED_MSG_ATTRIBUTE("Color theme is deprecated and will be removed in future versions");
 
 /// Controller for capture image. If created without initial view controller, pushes camera controller automatically.
 ABBYYUI_EXTERN
@@ -30,8 +30,11 @@ ABBYYUI_EXTERN
 /// Camera torch toggle button. Selected state stores in NSUserDefaults.
 @property (nonatomic, strong, nullable) IBOutlet UIButton* flashButton;
 
-/// Capture image immediately button.
+/// Capture  button.
 @property (nonatomic, strong, nullable) IBOutlet UIButton* captureButton;
+
+/// Button for immediate capture.
+@property (nonatomic, strong, nullable) IBOutlet UIButton* manualCaptureButton;
 
 /// Pick image from gallery button.
 @property (nonatomic, strong, nullable) IBOutlet UIButton* galleryButton;
@@ -43,7 +46,7 @@ ABBYYUI_EXTERN
 @property (nonatomic, readonly, nullable) id<AUICameraSettings> cameraSettings;
 
 /// Color theme.
-@property (nonatomic, assign) AUITheme theme;
+@property (nonatomic, assign) AUITheme theme DEPRECATED_MSG_ATTRIBUTE("Color theme is deprecated and will be removed in future versions");
 
 /// Color of selected controls.
 @property (nonatomic, copy) UIColor* customColor;

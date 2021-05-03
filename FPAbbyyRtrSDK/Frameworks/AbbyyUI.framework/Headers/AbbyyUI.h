@@ -14,3 +14,6 @@
 #import "AUIMultiPageImageCaptureScenario.h"
 #import "AUIMultiPageImageCaptureResult.h"
 #import "AUIPageStorage.h"
+
+#import "AUIDataCaptureScenario.h"
+#import "AUIDataCaptureScenarioResult.h"

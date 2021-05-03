@@ -1,4 +1,4 @@
-/// ABBYY® Mobile Capture © 2019 ABBYY Production LLC.
+/// ABBYY Mobile Capture © 2020 ABBYY Development, Inc.
 /// ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
 
 #import <Foundation/Foundation.h>
@@ -10,6 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class RTRCharInfo;
 @class RTRDataField;
 @class RTRDataFieldInfo;
+@class RTRTextLine;
 
 /// Field description.
 RTR_API_LINKAGE
@@ -44,6 +45,8 @@ RTR_API_LINKAGE
 @property (nonatomic, copy, readonly, nullable) NSArray<RTRCharInfo*>* charsInfo;
 /// In some cases the field contains several components, like for example passport number or last name.
 @property (nonatomic, copy, readonly, nullable) NSArray<RTRDataField*>* components;
+/// Lines of recognized text.
+@property (nonatomic, copy, readonly, nullable) NSArray<RTRTextLine*>* textLines;
 
 - (instancetype)init __unavailable;
 

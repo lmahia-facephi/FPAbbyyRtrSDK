@@ -43,6 +43,16 @@ typedef NS_ENUM(NSInteger, RTRCallbackWarningCode) {
 };
 
 /**
+ * The type of scene on image.
+ */
+typedef NSString* const RTRCaptureSceneType NS_EXTENSIBLE_STRING_ENUM;
+
+/** Natural scene */
+RTR_API_LINKAGE RTRCaptureSceneType RTRCaptureSceneTypeNaturalScene;
+/** Document */
+RTR_API_LINKAGE RTRCaptureSceneType RTRCaptureSceneTypeDocument;
+
+/**
  * The type of the text.
  */
 typedef NSString* const RTRTextType NS_EXTENSIBLE_STRING_ENUM;
