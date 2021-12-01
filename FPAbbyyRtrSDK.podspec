@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FPAbbyyRtrSDK'
-  s.version          = '0.1.93'
+  s.version          = '0.1.100'
   s.summary          = 'AbbyyRtrSDK pod version'
   s.description      = <<-DESC
 This pod was built to provide a pod version of Abbyy Framework which is licensed.
@@ -26,8 +26,6 @@ ABBYY is a registered trademark or a trademark of ABBYY Software Ltd.
     'ENABLE_BITCODE'                       => 'NO',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386'
   }
-
-  s.source_files   = 'FPAbbyyRtrSDK/Classes/**/*'
 
   s.preserve_paths = 'FPAbbyyRtrSDK/Frameworks/**/*'
 
